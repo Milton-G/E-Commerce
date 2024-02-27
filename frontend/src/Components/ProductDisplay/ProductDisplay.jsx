@@ -6,7 +6,7 @@ import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = (props) => {
     const {product}=props;
-    const{addToCart}=useContext(ShopContext)
+    const{addToCart}=useContext(ShopContext);
   return (
     <div className="productdisplay">
         <div className="productdisplay-left">
@@ -41,7 +41,7 @@ const ProductDisplay = (props) => {
                 
                 <div className="productdisplay-right-new-price">kshs{product.new_price}</div> 
             </div>
-             <div className="productdisplay_right_description">
+             <div className="productdisplay-right-description">
                 light weight, knitted, well round
              </div>
              <div className="productdisplay-right-size">
