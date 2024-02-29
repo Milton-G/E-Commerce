@@ -22,7 +22,7 @@ const CartItems = () => {
         if (cartItems[e.id]>0)
         {
             return <div>
-            <div className="cartItems-format cartitems-format-main">
+            <div className="cartitems-format cartitems-format-main">
                <img src={e.image}alt='' className='carticon-product-icon'/>
                <p>{e.name}</p> 
                <p>Kshs{e.new_price}</p> 
