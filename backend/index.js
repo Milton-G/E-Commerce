@@ -205,7 +205,7 @@ app.get('/newcollections',async(req,res)=>{
 })
 
 //creating api for popular in women
-app.get('/popularinwomen', async(res,req)=>{
+app.get('/popularinwomen', async(req,res)=>{
     let products=await Product.find({category:"women"});
     let popular_in_women=products.slice(0,4);
     console.log("Popular in women fetched");
@@ -239,7 +239,7 @@ app.post('/addtocart', Fetchuser,async(req,res)=>{
 })
 
 //Creating endpoint to remove product from cart data
-app.post('/removefromcart',Fetchuser,async(res,req)=>{
+app.post('/removefromcart',Fetchuser,async(req,res)=>{
     console.log("removed",req.body.itemId);
     let userData=await Users.findOne({_id:req.user.id});
     if(userData.cartData[req.body.itemId]>0)
@@ -249,7 +249,7 @@ app.post('/removefromcart',Fetchuser,async(res,req)=>{
 })
 
 //creating api for retaining cart data on login
-app.post('/getcart',Fetchuser,async(res,req)=>{
+app.post('/getcart',Fetchuser,async(req,res)=>{
     console.log("GetCart");
     let userData=await Users.findOne({_id:req.user.id})
     res.json(userData.cartData);
